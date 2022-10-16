@@ -1,11 +1,15 @@
 extends KinematicBody
 
+const COOLDOWN = 8
 const MAXSPEED = 30
 const ACCELERATION = 0.75
+const MAXHP = 1000
+
 var inputVector = Vector3()
 var velo = Vector3()
 var cooldown = 0
-const COOLDOWN = 8
+var HP = 100
+
 
 #var Bullet = preload("res://Bullet.tscn")
 
@@ -24,3 +28,12 @@ func getInput():
 	inputVector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	inputVector.y = Input.get_action_strength("ui_up") - Input.get_action_strength("ui_down")
 	inputVector = inputVector.normalized()
+	if Input.is_action_just_pressed("ui_accept"):
+		$GUN.fire()
+	
+func takeDamage(damage):
+	HP -= damage
+	if HP <= 0:
+		Events.emit_signal("GameOVER")
+		self.queue_free()
+		
