@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Blender Imports/3D Space Shooter Assets/Blender Imports/Black Glass.material" type="Material" id=1]
 [ext_resource path="res://Blender Imports/3D Space Shooter Assets/Blender Imports/Wing Blue.material" type="Material" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://Blender Imports/3D Space Shooter Assets/Blender Imports/Booster.material" type="Material" id=4]
 [ext_resource path="res://Player/player.gd" type="Script" id=5]
 [ext_resource path="res://Bullet/GUN.tscn" type="PackedScene" id=6]
-[ext_resource path="res://GUN.gd" type="Script" id=7]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "player_Cube005"
@@ -75,4 +74,3 @@ shape = SubResource( 2 )
 
 [node name="GUN" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6 )
-script = ExtResource( 7 )

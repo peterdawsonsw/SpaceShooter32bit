@@ -2,7 +2,7 @@ extends Area
 
 
 export var damage = 5
-export var speed = 10
+export var speed = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,4 +15,5 @@ func _process(delta):
 
 
 func _on_Bullet_body_entered(body):
+	print("hit " + body.name)
 	body.takeDamage(damage)

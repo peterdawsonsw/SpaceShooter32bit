@@ -1,4 +1,5 @@
 extends KinematicBody
+class_name Player
 
 const COOLDOWN = 8
 const MAXSPEED = 30
@@ -30,9 +31,12 @@ func getInput():
 	inputVector = inputVector.normalized()
 	if Input.is_action_just_pressed("ui_accept"):
 		$GUN.fire()
+		print(str(HP))
 	
 func takeDamage(damage):
+	
 	HP -= damage
+	print(str(HP))
 	if HP <= 0:
 		Events.emit_signal("GameOVER")
 		self.queue_free()

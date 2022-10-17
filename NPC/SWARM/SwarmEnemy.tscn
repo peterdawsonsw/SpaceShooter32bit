@@ -48,6 +48,7 @@ surfaces/2 = {
 extents = Vector3( 2, 2, 2 )
 
 [node name="enemy" type="KinematicBody"]
+collision_mask = 0
 script = ExtResource( 4 )
 
 [node name="EnemyMesh" type="MeshInstance" parent="."]
