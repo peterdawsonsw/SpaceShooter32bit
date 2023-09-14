@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player/ufo.tscn" type="PackedScene" id=1]
-[ext_resource path="res://NPC/SWARM/SwarmEnemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://RichTextLabel.gd" type="Script" id=2]
 [ext_resource path="res://Blender Imports/3D Space Shooter Assets/environment.png" type="Texture" id=3]
+[ext_resource path="res://NPC/Spawner.gd" type="Script" id=4]
 
 [sub_resource type="PanoramaSky" id=1]
 panorama = ExtResource( 3 )
@@ -14,12 +15,6 @@ ambient_light_color = Color( 0.027451, 0.709804, 0.917647, 1 )
 
 [node name="Main" type="Spatial"]
 
-[node name="enemy" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -44.3633 )
-
-[node name="ufo" parent="." instance=ExtResource( 1 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
-
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.87025, 12.0192 )
 
@@ -28,3 +23,21 @@ environment = SubResource( 2 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.982567, 0.185907, 0, -0.185907, 0.982567, 0.0314817, 6.31625, 10.8968 )
+
+[node name="Spawner" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -701.803 )
+script = ExtResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="ufo" parent="." instance=ExtResource( 1 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_right = 267.0
+margin_bottom = 76.0
+script = ExtResource( 2 )
+
+[connection signal="timeout" from="Timer" to="Spawner" method="_on_Timer_timeout"]
