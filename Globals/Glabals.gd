@@ -7,3 +7,6 @@ enum {
 }
 
 var score = 0
+
+func GameState():
+	pass
