@@ -9,7 +9,7 @@ func _physics_process(delta):
 		queue_free()
 
 func takeDamage(damage):
+	Glabals.score += 1
 	HP -= damage
 	if HP <= 0:
-		Glabals.score += 1
-		self.queue_free()
+		queue_free()
