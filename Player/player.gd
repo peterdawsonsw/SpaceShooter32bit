@@ -34,7 +34,6 @@ func getInput():
 		print(str(HP))
 	
 func takeDamage(damage):
-	
 	HP -= damage
 	print(str(HP))
 	if HP <= 0:
