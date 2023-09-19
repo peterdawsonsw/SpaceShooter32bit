@@ -11,9 +11,6 @@ var velo = Vector3()
 var cooldown = 0
 var HP = 100
 
-
-#var Bullet = preload("res://Bullet.tscn")
-
 func _physics_process(delta):
 	getInput()
 	velo.x = move_toward(velo.x, inputVector.x * MAXSPEED, ACCELERATION)
@@ -39,4 +36,3 @@ func takeDamage(damage):
 	if HP <= 0:
 		Events.emit_signal("GameOVER")
 		self.queue_free()
-		
