@@ -16,6 +16,7 @@ background_sky = SubResource( 1 )
 ambient_light_color = Color( 0.027451, 0.709804, 0.917647, 1 )
 
 [node name="Main" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.716724, -1.99236, 0.84871 )
 script = ExtResource( 5 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
