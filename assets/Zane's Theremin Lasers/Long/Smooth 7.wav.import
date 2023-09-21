@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Smooth 7.wav-cd022bb5e10125eeeaf4b7d76fe31e11.sample"
+
+[deps]
+
+source_file="res://assets/Zane's Theremin Lasers/Long/Smooth 7.wav"
+dest_files=[ "res://.import/Smooth 7.wav-cd022bb5e10125eeeaf4b7d76fe31e11.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

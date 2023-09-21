@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Space 8.wav-595da4b2b0d4ee2ae706b5ec85c76dbc.sample"
+
+[deps]
+
+source_file="res://assets/Zane's Theremin Lasers/Short/Space 8.wav"
+dest_files=[ "res://.import/Space 8.wav-595da4b2b0d4ee2ae706b5ec85c76dbc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

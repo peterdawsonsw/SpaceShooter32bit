@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Cream 1.wav-7ba210aba632eecf55612d74baf9d238.sample"
+
+[deps]
+
+source_file="res://assets/Zane's Theremin Lasers/Up/Cream 1.wav"
+dest_files=[ "res://.import/Cream 1.wav-7ba210aba632eecf55612d74baf9d238.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
